@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="education.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .img-deg{
+            float: right;
+            width: 600px;
+            height: 690px;
+            left: 50px;
+            padding-left: 180px;
+            bottom: 50px;
+        }
+        .img-deg:hover{
+            cursor: pointer;
+            opacity: 0.7;
+        }
+        
+        span{
+            color: #10bbf0;
+        }
+        .skills {
+            min-height: auto;
+            padding-bottom: 7rem;
+            background: #081b29;
+        }
+        .skills .skills-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5rem;
+            padding-left: 50px;
+            max-width: 80%;
+            min-height: 50%;
+            
+        }
+        .skills-row .skills-column{
+            flex: 1 1 50rem;
+            margin-left: 350px;
+            
+        }
+        .skills-column .title{
+            font-size: 2.5rem;
+            margin: 0 0 1.5rem;
+        }
+        .skills-box .skills-content{
+            position: relative;
+            border: .2rem solid #10bbf0;
+            border-radius: .6rem;
+            padding: .5rem 1.5rem;
+            overflow: hidden;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .skills-box .skills-content::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background:#0b2d46;
+            z-index: -1;
+            transition: .5s;
+        }
+        .skills-box .skills-content:hover::before{
+            width: 100%;
+            
+        }
+        .skills-content .progress{
+            padding: .1rem 0;
+
+        }
+        .skills-content .progress h3{
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        .skills-content .progress h3 i{
+            margin-right: 510px;
+            margin-top: 4px;
+        }
+        
+        .skills-content .progress h3 span{
+            color: rgb(13, 243, 166);
+        }
+        .skills-content .progress .bar{
+            height: 1.5rem;
+            border-radius: .6rem;
+            border: .1rem solid #10bbf0;
+            padding: .5rem;
+            margin: 1rem 0;
+        }
+        .skills-content .progress .bar span{
+            display: block;
+            height: 100%;
+            border-radius: .3rem;
+            background: #10acdb;
+            
+            
+        }
+        .skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span{
+            width: 90%;
+        }
+        .skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span{
+            width: 92%;
+        }
+        .skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span{
+            width: 80%;
+        }
+        .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span{
+            width: 85%;
+        }
+        .skills-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span{
+            width: 78%;
+        }
+
+        .contact h2{
+            font-size: 40px;
+            color: #189db4;
+            text-align: center;
+            margin-bottom: 10px;
+    
+        }
+        .contact form{
+            width: 600px;
+            text-align: center;
+            margin-left:370px ;
+        }
+        form .input-box{
+            display: flex;
+            justify-content: space-between;
+            justify-content: center;
+        }
+        .field .item{
+            width: 100%;
+            padding: 18px;
+            background: transparent;
+            border: 2px solid #0ef;
+            border-radius: 6px;
+            font-size: 16px;
+            color: aliceblue;
+            margin: 12px 0;
+        }
+        .textareas-field {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 600px;
+            margin-left: 370px;
+        }
+        form button{
+            padding: 12px 32px;
+            background: #0ef;
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            box-shadow: 0 0 10px #0ef;
+            font-size: 16px;
+            color: #1f242d;
+            cursor: pointer;
+            margin-left: 620px;
+        }
+        footer{
+            background: #1f242d;
+            
+        }
+        footer .footer-content{
+            
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+            position: relative;
+        }
+        .co{
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            justify-content: space-around;
+            
+        }
+        .co:hover{
+            cursor: pointer;
+            color: rgb(160, 61, 209);
+        }
+        .footer{
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+        }
+        @media (max-width: 1200px){
+            html{
+                font-size: 55%;
+            }
+        }
+        @media(max-width:991px){
+            .header{
+                padding: 2rem 4%;
+            }
+            section{
+                padding: 10rem 4% 2rem;
+            }
+            .home{
+                padding: 0 4%;
+            }
+            .footer{
+                padding: 2rem 4%;
+            }
+            
+        }
+
+            @media(max-width:768px){
+                .header{
+                    background: #081b29;
+
+                }
+                .menu-icon {
+                    display: block;
+                }
+                
+                
+                .navbar{
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    padding: 1rem 4%;
+                    background:transparent;
+                    align-items: center;
+                    justify-content: space-between;
+                    display: flex;
+                    gap: 2px;
+                    bottom: 35px;
+                    box-shadow: 0.5rem 1rem rgba(0,0,0,.2);
+                }
+                .navbar a{
+                    display: block;
+                    font-size: 2rem;
+                    margin: 3rem 0;
+                }
+                .about{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 18rem;
+                    background: var(--second-bd-color);
+                    padding-bottom: 7rem;
+                    
+                    
+                    
+                    
+                }
+                .about-img{
+                    position: relative;
+                    width: 35rem;
+                    height: 15rem;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 500px;
+                    right: 250px;
+                    max-height: 90px;
+                    
+
+                }
+               
+                .about-img :hover{
+                    cursor: pointer;
+                    opacity: .5;
+                }
+                
+                
+                .skills {
+                    min-height: auto;
+                    padding-bottom: 7rem;
+                    background: #081b29;
+                    
+                    
+                }
+                .skills .skills-row {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 5rem;
+                    padding-left: 50px;
+                    justify-content: center;
+                    align-items: center;
+                    right: 100px;
+                    max-width: 80%;
+                    min-height: 50%;
+                    margin-right: 100px;
+                    padding-right: 50px;
+                    
+                    
+                }
+                .skills-row .skills-column{
+                    flex: 1 1 10rem;
+                    margin-left: 100px;
+                    min-width: 150%;
+                    
+                }
+                .skills-column .title{
+                    font-size: 2.5rem;
+                    margin: 0 0 1.5rem;
+                }
+                .skills-box .skills-content{
+                    position: relative;
+                    border: .2rem solid #10bbf0;
+                    border-radius: .6rem;
+                    padding: .5rem 1.5rem;
+                    overflow: hidden;
+                    z-index: 1;
+                    cursor: pointer;
+                }
+                
+                .img-deg{
+                    float: right;
+                    width: 600px;
+                    height: 690px;
+                    left: 50px;
+                    padding-left: 180px;
+                    bottom: 50px;
+                    top: 330px;
+                    right: 402px;
+                    
+                }
+                .img-deg:hover{
+                    cursor: pointer;
+                    opacity: 0.7;
+                }
+                
+            }
+            @media(max-width:1008px){
+                form .input-box{
+                    display: flex;
+                    justify-content: space-between;
+                    justify-content: center;
+                }
+                .field .item{
+                    width: 100%;
+                    padding: 18px;
+                    background: transparent;
+                    border: 2px solid #0ef;
+                    border-radius: 6px;
+                    font-size: 16px;
+                    color: aliceblue;
+                    margin: 12px 0;
+                    
+                }
+                form .textareas-field{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    border: 300px;
+                    margin-left: 70px;
+                    position: relative;
+                    height: 100px;
+                    padding-top: 200px;
+                    right: 60px;
+                    
+                }
+                form button{
+                    padding: 12px 32px;
+                    background: #0ef;
+                    border: none;
+                    outline: none;
+                    border-radius: 6px;
+                    box-shadow: 0 0 10px #0ef;
+                    font-size: 16px;
+                    color: #1f242d;
+                    cursor: pointer;
+                    margin-left: 200px;
+                    padding-top: 20px;
+                    margin-top: 190px;
+                    margin-right: 20px;
+                    
+                }
+            }
+        
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="" class="logo">SHAJI Portfolio.</a>
+        
+       
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#skillss">Project</a>
+            <a href="#contactme">contact</a>
+
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="container">
+            
+            <div class="home-content">
+                <h1>Hi, I'm Shaji S</h1>
+                <h3>Python Developer</h3>
+                <p>I hope this message finds you well. I am writing to express my interest in the Python Developer position as a fresher.
+                I recently graduated with a degree in B.E Mechanical Engineering from University College of Engineering,Nagercoil.I have completed a Python FullStack development course at Networkz System in Nagercoil. During my academic career, I developed a strong foundation in Python programming, including key skills in Python,Javascript,Django,HTML,CSS,MYSQL.
+                </p>
+                <div class="btn-box">
+                    <a href="https://drive.google.com/file/d/1jXKX7CkjWSMMKpJg7q_iL5-7bQepyptE/view?usp=drivesdk ">Resume</a>
+                    <a href="https://github.com/SHAJISP2002">GITHUB</a>
+                </div>
+            </div>
+            <img src="images/sshh.png" alt="" class="img-deg">
+        </div>
+    </section>
+
+
+    <body class="shaji">
+        <section class="about" id="about" >
+            <h2 class="heading">About me</h2>
+            <div class="about-img">
+                <img src="images/zxc.jpg" alt="" width="400px" height="400px">
+                <span class="circle-spin"></span>
+            </div>
+            <div class="about-content">
+                
+                <p>My name is Shaji, and I am from 
+                    Kanyakumari. I have completed my Bachelor's degree from 
+                    University College of Engineering, Nagercoil. Additionally, 
+                    I have completed a Python Fullstack Development course at 
+                    Networkz System in Nagercoil. 
+                    During my academic career, I developed a strong 
+                    foundation in Python programming, including key skills in 
+                    Python, JavaScript, Django, HTML, CSS, and MySQL. 
+                </p>
+                
+            </div>
+        </section>
+
+        <section class="education" id="education">
+            <h3 class="heading">My <span>Journey</span></h3>
+            <div class="education-row">
+                <div class="education-column">
+                    <h3 class="title">Education</h3>
+                    <div class="education-box">
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year" ><i class='bx bxs-calendar'></i>2017-2018</div>
+                                <h3>SSLC</h3>
+                                <p>SSLC from Mother Theresa matric higher secondary school ,
+                                    Mylode in 2018 with 85%.</p>
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year" ><i class='bx bxs-calendar'></i>2019-2020</div>
+                                <h3>HSC</h3>
+                                <p>HSC from Mother Theresa matric higher secondary school ,
+                                    Mylode in 2020 with 62%.</p>
+                            </div>
+                        </div>
+
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year" ><i class='bx bxs-calendar'></i>2020-2024</div>
+                                <h3>B.E/MECHANICAL ENGINEERING</h3>
+                                <p>I have completed in B.E Mechanical Engineering from University College of Engineering,Nagercoil</p>
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year" ><i class='bx bxs-calendar'></i>3/11/2023 - 25/01/2024</div>
+                                <h3>Python FullStack Development Cource</h3>
+                                <p>Python FullStack
+                                    development cource at
+                                    Networks System
+                                    Software Training
+                                    Company in nagercoil,Kanniyakumari.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+        
+
+
+        <section class="skills" id="skills">
+            <h3 class="heading">My <span>Skills</span></h3>
+            <div class="skills-row">
+                <div class="skills-column">
+                    <h3 class="title"></h3>
+                    <div class="skills-box">
+                        <div class="skills-content">
+                            <div class="progress">
+                                <h3>HTML <i class='bx bxl-html5'></i><span>90%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+    
+                            <div class="progress">
+                                <h3>CSS <i class='bx bxl-css3' style="margin-right: 530px;" ></i><span>92%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+    
+                            <div class="progress">
+                                <h3>PYTHON<i class='bx bxl-python' style="margin-right: 490px;"></i><span>80%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+    
+                            <div class="progress">
+                                <h3>DJANGO<i class='bx bxl-django' style="margin-right: 490px;"></i><span>85%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+    
+                            <div class="progress">
+                                <h3>Javascript<i class='bx bxl-javascript' style="margin-right: 470px;"></i><span>78%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills" id="skillss">
+            <h3 class="heading">PRO<span>JECT</span></h3>
+            <h4 class="head">Commercial   cameras   ecommerce   website using django framework</h4>
+            <style>
+                .head{
+                    margin-top: 30px;
+                    font-size: 22px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: rgb(218, 207, 149);
+
+                }
+            </style>
+            <div class="card-container">
+                <div class="card">
+                    <img src="images/register.jpg" alt="" >
+                    <div class="card-content">
+                        <h3>Register page</h3>
+                        <p>This is register page in commercial cammeras ecommerce website</p>
+                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/register.html" class="btn">View code</a>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img src="images/login.jpg" alt="" >
+                    <div class="card-content">
+                        <h3>login page</h3>
+                        <p>This is login page in commercial cammeras ecommerce website</p>
+                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/login.html" class="btn">View code</a>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img src="images/spo.jpg" alt="" >
+                    <div class="card-content">
+                        <h3>Home page</h3>
+                        <p>This is home page in commercial cammeras ecommerce website</p>
+                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/inc/slider.html" class="btn">View code</a>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img src="images/collection.jpg" alt="" >
+                    <div class="card-content">
+                        <h3>collections page</h3>
+                        <p>This is camera catagories page in commercial cammeras ecommerce website</p>
+                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/collections.html" class="btn">View code</a>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img src="images/product .jpg" alt="" >
+                    <div class="card-content">
+                        <h3>products page</h3>
+                        <p>This is camera products page in commercial cammeras ecommerce website</p>
+                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/categoryproduct/home.html" class="btn">View code</a>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img src="images/product_detail.jpg" alt="" >
+                    <div class="card-content">
+                        <h3>product detail page</h3>
+                        <p>This is camera product detail page in commercial cammeras ecommerce website</p>
+                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/categoryproduct/product_details.html" class="btn">View code</a>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img src="images/form.jpg" alt="" >
+                    <div class="card-content">
+                        <h3>place order page</h3>
+                        <p>And finally camera order page in commercial cammeras ecommerce website</p>
+                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/place_order.html" class="btn">View code</a>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="contactme" id="contactme">
+            <h2 class="heading">contact me!</h2>
+            <form action="">
+                <div class="input-box">
+                    <div class="input-field field">
+                        <input type="text" placeholder="FullName" id="name" class="item" autocomplete="off">
+                    </div>
+                    <div class="input-field field">
+                        <input type="Email" placeholder="Email id" id="email" class="item" autocomplete="off">
+                    </div>
+                </div>
+    
+                <div class="input-box">
+                    <div class="input-field field">
+                        <input type="text" placeholder="phonenumber" id="phone" class="item" autocomplete="off">
+                    </div>
+                    <div class="input-field field">
+                        <input type="text" placeholder="subject" id="subject" class="item" autocomplete="off">
+                    </div>
+                </div>
+                <div class="textareas-field field">
+                    <textarea name="" id="message" cols="30" rows="10" placeholder="your message" class="item" autocomplete="off"></textarea>
+                </div>
+                <button type="submit" onclick="sendemail()">Send Me</button>
+            </form>
+        </section><br><br>
+        <section>
+
+            <footer>
+                <div class="footer">
+                    <p>&copy; 2024 Your Company. All rights reserved.</p>
+                    <p><a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a></p>
+                </div>
+                <div class="co">
+                    <a href="https://github.com/SHAJISP2002"><h3><i class="fa-brands fa-github"></i></h3></a>
+                    <a href="mailto:shajisp2002@gmail.com"><h3><i class="fa-solid fa-square-envelope"></i></h3></a>
+                    <a href="https://www.linkedin.com/in/shaji-s-4ba506302/ "><h3><i class="fa-brands fa-linkedin-in"></i></h3></a>
+                    <a href="+918124436942"><h3><i class="fa-brands fa-whatsapp"></i></h3></a>
+                    
+                </div>
+            </footer>
+            
+        </section>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+    
+        <script>
+
+            function toggleMenu() {
+                const navbar = document.querySelector('.navbar');
+                navbar.classList.toggle('active');
+            }
+
+            window.onscroll = () => {
+                let header = document.querySelector('header');
+                header.classList.toggle('sticky',window.scrollY > 100);
+            }
+    
+            // Smooth scroll effect
+            
+           
+            function sendemail(){
+                alert("your message is successfully send")
+            }
+        </script>
+</body>
+</html>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
