@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="education.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+
+    <style>
+        /* ========== MOBILE STYLES ========== */
+    @media (max-width: 768px) {
+        /* General reset */
+        body, html {
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .container, .home-content, .about-content, .skills-content, .education-column, .contactme form {
+            padding: 0 1rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        header {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+        }
+
+        .navbar {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .navbar.active {
+            display: flex;
+        }
+
+        .navbar a {
+            padding: 10px 0;
+            text-align: left;
+            font-size: 1rem;
+        }
+
+        /* Menu toggle button */
+        .menu-toggle {
+            display: block;
+            cursor: pointer;
+            font-size: 24px;
+            margin-left: auto;
+        }
+
+        .home {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .img-deg {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .about-img img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+        }
+
+        .skills-content .progress h3 {
+            font-size: 0.9rem;
+        }
+
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            width: 90%;
+            margin-bottom: 20px;
+        }
+
+        .input-box {
+            flex-direction: column;
+        }
+
+        .input-field {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .co {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+    }
+
+    /* General styles for all devices */
+    body, html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+        .header, .navbar, .home-content, .about-content, .skills-content, .education-column, .contactme form {
+            padding: 0 1rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .navbar.active {
+            display: flex;
+        }
+
+        .card {
+            width: 90%;
+            margin-bottom: 20px;
+        }
+    }
+
+    /* Laptop styles */
+    @media (min-width: 769px) {
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .card {
+            width: 30%;
+            margin-bottom: 20px;
+        }
+    }
+</style>
+
+   
+</head>
+<body>
+    <header class="header">
+        <a href="" class="logo">SHAJI Portfolio.</a>
+        
+       
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#skillss">Project</a>
+            <a href="#contactme">contact</a>
+            
+
+        </nav>
+    </header>
+    <section class="home" id="home" data-aos="fade-up">
+        <div class="container">
+            
+            <div class="home-content">
+                <h1>Hi, I'm Shaji S</h1>
+                <h3>Python Developer</h3>
+                <p>I hope this message finds you well. I am writing to express my interest in the Python Developer position as a fresher.
+                I recently graduated with a degree in B.E Mechanical Engineering from University College of Engineering,Nagercoil.I have completed a Python FullStack development course at Networkz System in Nagercoil. During my academic career, I developed a strong foundation in Python programming, including key skills in Python,Javascript,Django,HTML,CSS,MYSQL.
+                </p>
+                <div class="btn-box">
+                    <a href="https://drive.google.com/file/d/1jXKX7CkjWSMMKpJg7q_iL5-7bQepyptE/view?usp=drivesdk ">Resume</a>
+                    <a href="https://github.com/SHAJISP2002">GITHUB</a>
+                </div>
+            </div>
+            <img src="images/sshh.png" alt="" class="img-deg">
+        </div>
+    </section>
+
+
+    <body class="shaji">
+        <section class="about" id="about" data-aos="fade-up" >
+            <h2 class="heading">About me</h2>
+            <div class="about-img">
+                <img src="images/zxc.jpg" alt="" width="400px" height="400px">
+                <span class="circle-spin"></span>
+            </div>
+            <div class="about-content">
+                
+                <p>My name is Shaji, and I am from 
+                    Kanyakumari. I have completed my Bachelor's degree from 
+                    University College of Engineering, Nagercoil. Additionally, 
+                    I have completed a Python Fullstack Development course at 
+                    Networkz System in Nagercoil. 
+                    During my academic career, I developed a strong 
+                    foundation in Python programming, including key skills in 
+                    Python, JavaScript, Django, HTML, CSS, and MySQL. 
+                </p>
+                
+            </div>
+        </section>
+
+        <section class="education" id="education" data-aos="fade-up">
+            <h3 class="heading">My <span>Journey</span></h3>
+            <div class="education-row">
+                <div class="education-column">
+                    <h3 class="title">Education</h3>
+                    <div class="education-box">
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year" ><i class='bx bxs-calendar'></i>2017-2018</div>
+                                <h3>SSLC</h3>
+                                <p>SSLC from Mother Theresa matric higher secondary school ,
+                                    Mylode in 2018 with 85%.</p>
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year" ><i class='bx bxs-calendar'></i>2019-2020</div>
+                                <h3>HSC</h3>
+                                <p>HSC from Mother Theresa matric higher secondary school ,
+                                    Mylode in 2020 with 62%.</p>
+                            </div>
+                        </div>
+
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year" ><i class='bx bxs-calendar'></i>2020-2024</div>
+                                <h3>B.E/MECHANICAL ENGINEERING</h3>
+                                <p>I have completed in B.E Mechanical Engineering from University College of Engineering,Nagercoil</p>
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year" ><i class='bx bxs-calendar'></i>3/11/2023 - 25/01/2024</div>
+                                <h3>Python FullStack Development Cource</h3>
+                                <p>Python FullStack
+                                    development cource at
+                                    Networks System
+                                    Software Training
+                                    Company in nagercoil,Kanniyakumari.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+        
+
+
+        <section class="skills" id="skills" data-aos="fade-up">
+            <h3 class="heading">My <span>Skills</span></h3>
+            <div class="skills-row">
+                <div class="skills-column">
+                    <h3 class="title"></h3>
+                    <div class="skills-box">
+                        <div class="skills-content">
+                            <div class="progress">
+                                <h3>HTML <i class='bx bxl-html5'></i><span>90%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+    
+                            <div class="progress">
+                                <h3>CSS <i class='bx bxl-css3' style="margin-right: 530px;" ></i><span>92%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+    
+                            <div class="progress">
+                                <h3>PYTHON<i class='bx bxl-python' style="margin-right: 490px;"></i><span>80%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+    
+                            <div class="progress">
+                                <h3>DJANGO<i class='bx bxl-django' style="margin-right: 490px;"></i><span>85%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+    
+                            <div class="progress">
+                                <h3>Javascript<i class='bx bxl-javascript' style="margin-right: 470px;"></i><span>78%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills" id="skillss" data-aos="fade-up">
+            <h3 class="heading">PRO<span>JECT</span></h3>
+            <h4 class="head">Commercial   cameras   ecommerce   website using django framework</h4>
+            <style>
+                .head{
+                    margin-top: 30px;
+                    font-size: 22px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: rgb(218, 207, 149);
+
+                }
+            </style>
+            <div class="card-container" data-aos="fade-up">
+                <div class="card">
+                    <img src="images/register.jpg" alt="" >
+                    <div class="card-content">
+                        <h3>Register page</h3>
+                        <p>This is register page in commercial cammeras ecommerce website</p>
+                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/register.html" class="btn">View code</a>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img src="images/login.jpg" alt="" >
+                    <div class="card-content">
+                        <h3>login page</h3>
+                        <p>This is login page in commercial cammeras ecommerce website</p>
+                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/login.html" class="btn">View code</a>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img src="images/spo.jpg" alt="" >
+                    <div class="card-content">
+                        <h3>Home page</h3>
+                        <p>This is home page in commercial cammeras ecommerce website</p>
+                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/inc/slider.html" class="btn">View code</a>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img src="images/collection.jpg" alt="" >
+                    <div class="card-content">
+                        <h3>collections page</h3>
+                        <p>This is camera catagories page in commercial cammeras ecommerce website</p>
+                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/collections.html" class="btn">View code</a>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img src="images/product .jpg" alt="" >
+                    <div class="card-content">
+                        <h3>products page</h3>
+                        <p>This is camera products page in commercial cammeras ecommerce website</p>
+                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/categoryproduct/home.html" class="btn">View code</a>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img src="images/product_detail.jpg" alt="" >
+                    <div class="card-content">
+                        <h3>product detail page</h3>
+                        <p>This is camera product detail page in commercial cammeras ecommerce website</p>
+                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/categoryproduct/product_details.html" class="btn">View code</a>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img src="images/form.jpg" alt="" >
+                    <div class="card-content">
+                        <h3>place order page</h3>
+                        <p>And finally camera order page in commercial cammeras ecommerce website</p>
+                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/place_order.html" class="btn">View code</a>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="contactme" id="contactme" data-aos="fade-up">
+            <h2 class="heading">contact me!</h2>
+            <form action="">
+                <div class="input-box">
+                    <div class="input-field field">
+                        <input type="text" placeholder="FullName" id="name" class="item" autocomplete="off">
+                    </div>
+                    <div class="input-field field">
+                        <input type="Email" placeholder="Email id" id="email" class="item" autocomplete="off">
+                    </div>
+                </div>
+    
+                <div class="input-box">
+                    <div class="input-field field">
+                        <input type="text" placeholder="phonenumber" id="phone" class="item" autocomplete="off">
+                    </div>
+                    <div class="input-field field">
+                        <input type="text" placeholder="subject" id="subject" class="item" autocomplete="off">
+                    </div>
+                </div>
+                <div class="textareas-field field">
+                    <textarea name="" id="message" cols="30" rows="10" placeholder="your message" class="item" autocomplete="off"></textarea>
+                </div>
+                <button type="submit" onclick="sendemail()">Send Me</button>
+            </form>
+        </section><br><br>
+        <section>
+
+            <footer>
+                <div class="footer">
+                    <p>&copy; 2024 Your Company. All rights reserved.</p>
+                    <p><a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a></p>
+                </div>
+                <div class="co">
+                    <a href="https://github.com/SHAJISP2002"><h3><i class="fa-brands fa-github"></i></h3></a>
+                    <a href="mailto:shajisp2002@gmail.com"><h3><i class="fa-solid fa-square-envelope"></i></h3></a>
+                    <a href="https://www.linkedin.com/in/shaji-s-4ba506302/ "><h3><i class="fa-brands fa-linkedin-in"></i></h3></a>
+                    <a href="+918124436942"><h3><i class="fa-brands fa-whatsapp"></i></h3></a>
+                    
+                </div>
+            </footer>
+            
+        </section>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+    
+        <script>
+
+            function toggleMenu() {
+                const navbar = document.querySelector('.navbar');
+                navbar.classList.toggle('active');
+            }
+
+            window.onscroll = () => {
+                let header = document.querySelector('header');
+                header.classList.toggle('sticky',window.scrollY > 100);
+            }
+    
+            // Smooth scroll effect
+            
+           
+            function sendemail(){
+                alert("your message is successfully send")
+            }
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200, // Animation duration
+            easing: 'ease-in-out', // Easing function
+            once: true, // Whether animation should happen only once
+        });
+    </script>
+</body>
+</html>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
