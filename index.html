@@ -10,110 +10,30 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  
+
 
 
     <style>
+        
         /* ========== MOBILE STYLES ========== */
-    @media (max-width: 768px) {
-        /* General reset */
-        body, html {
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-
-        .container, .home-content, .about-content, .skills-content, .education-column, .contactme form {
-            padding: 0 1rem;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        header {
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 10px;
-        }
-
-        .logo {
-            font-size: 1.2rem;
-        }
-
-        .navbar {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-        }
-
-        .navbar.active {
-            display: flex;
-        }
-
-        .navbar a {
-            padding: 10px 0;
-            text-align: left;
-            font-size: 1rem;
-        }
-
-        /* Menu toggle button */
-        .menu-toggle {
-            display: block;
-            cursor: pointer;
-            font-size: 24px;
-            margin-left: auto;
-        }
-
-        .home {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .img-deg {
-            width: 100%;
-            max-width: 300px;
-            margin: 0 auto;
-        }
-
-        .about-img img {
-            width: 100%;
-            max-width: 250px;
-            height: auto;
-        }
-
-        .skills-content .progress h3 {
-            font-size: 0.9rem;
-        }
-
-        .card-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .card {
-            width: 90%;
-            margin-bottom: 20px;
-        }
-
-        .input-box {
-            flex-direction: column;
-        }
-
-        .input-field {
-            width: 100%;
-            margin-bottom: 15px;
-        }
-
-        footer {
-            text-align: center;
-            font-size: 14px;
-        }
-
-        .co {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
+    
+    
+    .img-deg {
+        width: 100%; /* Make the image responsive */
+        max-width: 400px; /* Set a maximum width for the image */
+        height: auto;
+        left: 20px; /* Maintain aspect ratio */
+        border-radius: 20px 20px 10px 20px; /* Symmetrical rounded corners */
+        /* Smooth transition for hover effect */
     }
 
+    .img-deg:hover {
+        transform: translateY(-10px); /* Lift the image on hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    }
+    
     /* General styles for all devices */
     body, html {
         margin: 0;
@@ -128,29 +48,61 @@
         padding: 20px;
     }
 
-    /* Mobile styles */
-    @media (max-width: 768px) {
-        .header, .navbar, .home-content, .about-content, .skills-content, .education-column, .contactme form {
-            padding: 0 1rem;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .navbar {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-        }
-
-        .navbar.active {
-            display: flex;
-        }
-
-        .card {
-            width: 90%;
-            margin-bottom: 20px;
-        }
+    .card {
+        background-color: #202b36;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
     }
+    .heading{
+        padding-bottom: 80px;
+        right: 20px;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+    .skill-card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 150px;
+        padding: 1rem;
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #ddd; /* Add a border around the card */
+    }
+
+    .skill-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .skill-card img {
+        width: 100px; /* Consistent width for all devices */
+        height: auto;
+        margin-bottom: 1rem;
+        border: 2px solid #00abf0; /* Add a border around the image */
+        border-radius: 50%; /* Make the image circular */
+    }
+
+    .skill-card h4 {
+        font-size: 1.2rem;
+        color: #333;
+        text-align: center;
+    }
+
+    .skills-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+/* Remove any media query overrides for skill-card img */
+
 
     /* Laptop styles */
     @media (min-width: 769px) {
@@ -170,14 +122,116 @@
             margin-bottom: 20px;
         }
     }
+    
+/* Mobile styles */
+@media (max-width: 768px) {
+  .skills {
+    padding: 2rem 0;
+    text-align: center;
+    background-color: #081b29;
+  }
+
+  /* turn .skills-row into a flexbox row that wraps */
+  .skills-row {
+    display: flex;           /* activates flexbox */
+    flex-wrap: wrap;         /* allows wrapping to next line */
+    justify-content: center; /* centers each row */
+    gap: 1rem;               /* uniform gap between cards */
+  }
+
+  /* each card takes roughly 45 % so two fit per row */
+  .skill-card {
+    flex: 0 1 calc(45% - 1rem); /* basis = 45 %, minus the gap */
+    max-width: 160px;           /* keeps them from stretching too wide */
+    margin-bottom: 0;           /* the row gap above now handles spacing */
+  }
+
+  /* logo & caption sizing */
+  .skill-card img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+
+  .skill-card h4 {
+    font-size: 1rem;
+    color: #e6e6e6;            /* light text shows on the dark bg */
+  }
+  .btnsss{
+    padding: 12px 32px;
+    background: #0ef;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 16px;
+    color: #1f242d;
+    cursor: pointer;
+    margin-left: 200px;
+    padding-top: 20px;
+    margin-top: 190px;
+    margin-right: 20px;
+                    
+    }
+}
+@media (max-width: 768px) {
+    .img-deg {
+        display: none; /* Hide the image in mobile view */
+    }
+
+    
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #081b29;
+        padding: 100px ;
+        
+
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 18px;
+        margin: 10px 0;
+        color: aliceblue;
+        text-decoration: none;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+        color: #00abf0;
+    }
+}
 </style>
+
 
    
 </head>
 <body>
     <header class="header">
         <a href="" class="logo">SHAJI Portfolio.</a>
-        
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
        
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
@@ -204,33 +258,13 @@
                     <a href="https://github.com/SHAJISP2002">GITHUB</a>
                 </div>
             </div>
-            <img src="images/sshh.png" alt="" class="img-deg">
+            <img src="images/img.png" alt="" class="img-deg">
         </div>
     </section>
 
 
     <body class="shaji">
-        <section class="about" id="about" data-aos="fade-up" >
-            <h2 class="heading">About me</h2>
-            <div class="about-img">
-                <img src="images/zxc.jpg" alt="" width="400px" height="400px">
-                <span class="circle-spin"></span>
-            </div>
-            <div class="about-content">
-                
-                <p>My name is Shaji, and I am from 
-                    Kanyakumari. I have completed my Bachelor's degree from 
-                    University College of Engineering, Nagercoil. Additionally, 
-                    I have completed a Python Fullstack Development course at 
-                    Networkz System in Nagercoil. 
-                    During my academic career, I developed a strong 
-                    foundation in Python programming, including key skills in 
-                    Python, JavaScript, Django, HTML, CSS, and MySQL. 
-                </p>
-                
-            </div>
-        </section>
-
+       
         <section class="education" id="education" data-aos="fade-up">
             <h3 class="heading">My <span>Journey</span></h3>
             <div class="education-row">
@@ -281,46 +315,39 @@
         
 
 
-        <section class="skills" id="skills" data-aos="fade-up">
-            <h3 class="heading">My <span>Skills</span></h3>
-            <div class="skills-row">
-                <div class="skills-column">
-                    <h3 class="title"></h3>
-                    <div class="skills-box">
-                        <div class="skills-content">
-                            <div class="progress">
-                                <h3>HTML <i class='bx bxl-html5'></i><span>90%</span></h3>
-                                <div class="bar"><span></span></div>
-                            </div>
-    
-                            <div class="progress">
-                                <h3>CSS <i class='bx bxl-css3' style="margin-right: 530px;" ></i><span>92%</span></h3>
-                                <div class="bar"><span></span></div>
-                            </div>
-    
-                            <div class="progress">
-                                <h3>PYTHON<i class='bx bxl-python' style="margin-right: 490px;"></i><span>80%</span></h3>
-                                <div class="bar"><span></span></div>
-                            </div>
-    
-                            <div class="progress">
-                                <h3>DJANGO<i class='bx bxl-django' style="margin-right: 490px;"></i><span>85%</span></h3>
-                                <div class="bar"><span></span></div>
-                            </div>
-    
-                            <div class="progress">
-                                <h3>Javascript<i class='bx bxl-javascript' style="margin-right: 470px;"></i><span>78%</span></h3>
-                                <div class="bar"><span></span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section class="skills" id="skills" data-aos="fade-up">
+    <h3 class="heading" class="heading text-center mb-4">My <span>Skills</span></h3>
+    <div class="skills-row" data-aos>
+        <div class="skill-card">
+            <img src="images/ht.png" alt="HTML Logo">
+            <h4>HTML</h4>
+        </div>
+        <div class="skill-card">
+            <img src="images/cssss.png" alt="CSS Logo">
+            <h4>CSS</h4>
+        </div>
+        <div class="skill-card">
+            <img src="images/jss.jpg" alt="JavaScript Logo">
+            <h4>JavaScript</h4>
+        </div>
+        <div class="skill-card">
+            <img src="images/dj.png" alt="Django Logo">
+            <h4>Django</h4>
+        </div>
+        <div class="skill-card">
+            <img src="images/py.jpeg" alt="Python Logo">
+            <h4>Python</h4>
+        </div>
+        <div class="skill-card">
+            <img src="images/my.png" alt="MySQL Logo">
+            <h4>MySQL</h4>
+        </div>
+    </div>
+</section>
 
         <section class="skills" id="skillss" data-aos="fade-up">
-            <h3 class="heading">PRO<span>JECT</span></h3>
-            <h4 class="head">Commercial   cameras   ecommerce   website using django framework</h4>
+            <h2 class="heading">PRO<span>JECT</span></h2>
+            
             <style>
                 .head{
                     margin-top: 30px;
@@ -334,64 +361,35 @@
             </style>
             <div class="card-container" data-aos="fade-up">
                 <div class="card">
-                    <img src="images/register.jpg" alt="" >
+                    <img src="images/shajify.jpg" alt="" >
                     <div class="card-content">
-                        <h3>Register page</h3>
-                        <p>This is register page in commercial cammeras ecommerce website</p>
-                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/register.html" class="btn">View code</a>
-                    </div>
-                </div>
-    
-                <div class="card">
-                    <img src="images/login.jpg" alt="" >
-                    <div class="card-content">
-                        <h3>login page</h3>
-                        <p>This is login page in commercial cammeras ecommerce website</p>
-                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/login.html" class="btn">View code</a>
+                        <h3 style="color: #196d94;">ECOM-Shajify Website</h3>
+                        <p>ECOMMERCE WEBSITE FOR ALL PRODUCTS</p>
+                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/register.html" class="btn">View Website</a>
                     </div>
                 </div>
     
                 <div class="card">
                     <img src="images/spo.jpg" alt="" >
                     <div class="card-content">
-                        <h3>Home page</h3>
-                        <p>This is home page in commercial cammeras ecommerce website</p>
-                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/inc/slider.html" class="btn">View code</a>
+                        <h3 style="color: #196d94;">Website for Cameras</h3>
+                        <p> Ecommerce Website for Commercial Cameras </p>
+                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/login.html" class="btn">View code</a>
                     </div>
                 </div>
     
-                <div class="card">
-                    <img src="images/collection.jpg" alt="" >
-                    <div class="card-content">
-                        <h3>collections page</h3>
-                        <p>This is camera catagories page in commercial cammeras ecommerce website</p>
-                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/collections.html" class="btn">View code</a>
-                    </div>
-                </div>
+                
+               
+    
+                
+    
+                
     
                 <div class="card">
-                    <img src="images/product .jpg" alt="" >
+                    <img src="images/portt.PNG" alt="" >
                     <div class="card-content">
-                        <h3>products page</h3>
-                        <p>This is camera products page in commercial cammeras ecommerce website</p>
-                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/categoryproduct/home.html" class="btn">View code</a>
-                    </div>
-                </div>
-    
-                <div class="card">
-                    <img src="images/product_detail.jpg" alt="" >
-                    <div class="card-content">
-                        <h3>product detail page</h3>
-                        <p>This is camera product detail page in commercial cammeras ecommerce website</p>
-                        <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/categoryproduct/product_details.html" class="btn">View code</a>
-                    </div>
-                </div>
-    
-                <div class="card">
-                    <img src="images/form.jpg" alt="" >
-                    <div class="card-content">
-                        <h3>place order page</h3>
-                        <p>And finally camera order page in commercial cammeras ecommerce website</p>
+                        <h3 style="color: #196d94;">Portfolio Website</h3>
+                    
                         <a href="https://github.com/SHAJISP2002/camera-ecommerce-website/blob/master/studioapp/templates/shop/place_order.html" class="btn">View code</a>
                     </div>
                 </div>
@@ -422,7 +420,7 @@
                 <div class="textareas-field field">
                     <textarea name="" id="message" cols="30" rows="10" placeholder="your message" class="item" autocomplete="off"></textarea>
                 </div>
-                <button type="submit" onclick="sendemail()">Send Me</button>
+                <button type="submit" class="btnsss" onclick="sendemail()">Send Me</button>
             </form>
         </section><br><br>
         <section>

@@ -153,7 +153,7 @@ body{
 
 .btn-box a:hover{
     display: flex;
-    filter: drop-shadow(0 0 10px #fffdef);
+    filter: drop-shadow(0 0 10px #0892b4);
 
 }
 @keyframes showRight{
