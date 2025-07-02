@@ -153,7 +153,11 @@ body{
 
 .btn-box a:hover{
     display: flex;
+<<<<<<< HEAD
     filter: drop-shadow(0 0 10px #0892b4);
+=======
+    filter: drop-shadow(0 0 10px #fffdef);
+>>>>>>> de7b4280a00f7733d932beda32f48fb0c6771d88
 
 }
 @keyframes showRight{
@@ -210,6 +214,7 @@ body{
     color: aliceblue;
 
 }
+<<<<<<< HEAD
 .heading{
     display: flex;
     top: 0px;
@@ -852,4 +857,3 @@ body{
   }
 }
 
-        

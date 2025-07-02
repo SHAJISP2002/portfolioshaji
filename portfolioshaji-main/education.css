@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* .heading{
+=======
+.heading{
+>>>>>>> de7b4280a00f7733d932beda32f48fb0c6771d88
     display: flex;
     top: 0px;
     left: 0;
@@ -76,4 +80,8 @@ body{
 }
 .education-content .content h3{
     color: aquamarine;
+<<<<<<< HEAD
 } */
+=======
+}
+>>>>>>> de7b4280a00f7733d932beda32f48fb0c6771d88
